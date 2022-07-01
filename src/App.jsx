@@ -1,12 +1,13 @@
 import React from 'react';
 import { Header } from './components/Header/index';
 import { Counter } from './components/Counter/index';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { CountReducer } from './reducers/CountReducer';
 import { Provider } from 'react-redux';
 
 export const App = () => {
-	const store = createStore(CountReducer);
+	const allReducers = combineReducers({ counter: CountReducer });
+	const store = createStore(allReducers);
 
 	return (
 		<>

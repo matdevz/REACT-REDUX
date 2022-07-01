@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 export const Header = ({}) => {
-	const couter = useSelector((state) => state);
+	const couter = useSelector((state) => state.counter);
 
 	return (
 		<>
